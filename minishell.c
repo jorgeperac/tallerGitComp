@@ -6,14 +6,20 @@
 /*   By: jorpere2 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 15:51:21 by jorpere2          #+#    #+#             */
-/*   Updated: 2025/11/12 15:57:17 by jorpere2         ###   ########.fr       */
+/*   Updated: 2025/11/12 16:03:30 by jorpere2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	main()
+void	ft_putstr(char *str)
 {
-	printf("s%", "Hola Mundo!");
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
